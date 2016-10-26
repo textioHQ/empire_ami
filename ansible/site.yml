@@ -7,6 +7,7 @@
     - swap
     - docker
     - aws_ecs
+    - { role: sumologic, when: enable_streaming_logs == 'true' }
     - { role: logspout, when: enable_streaming_logs == 'true' }
 - hosts: controller
   connection: local
